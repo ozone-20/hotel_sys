@@ -26,50 +26,219 @@ public class reception extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        upRoom = new javax.swing.JButton();
+        searchRo = new javax.swing.JButton();
+        upStatus = new javax.swing.JButton();
+        checkout = new javax.swing.JButton();
+        logOut = new javax.swing.JButton();
+        customerinfo = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        upRoom.setText("Update Room Info");
+        upRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                upRoomActionPerformed(evt);
             }
         });
+
+        searchRo.setText("Search Room");
+        searchRo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchRoActionPerformed(evt);
+            }
+        });
+
+        upStatus.setText("Update status");
+        upStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upStatusActionPerformed(evt);
+            }
+        });
+
+        checkout.setText("Check Out");
+        checkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkoutActionPerformed(evt);
+            }
+        });
+
+        logOut.setText("Logout");
+        logOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutActionPerformed(evt);
+            }
+        });
+
+        customerinfo.setText("customer Info");
+        customerinfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerinfoActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("New Customer Form");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(upStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(upRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(searchRo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(customerinfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(checkout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE))
+                .addGap(0, 37, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(checkout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(upStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(upRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(searchRo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(customerinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(logOut, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(189, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(160, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(158, 158, 158))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1077, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(52, 52, 52))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void checkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutActionPerformed
         // TODO add your handling code here:
+        checkOut frame = new checkOut();
+
+        // Set the size of the JFrame (width, height)
+        frame.setSize(820, 440);
+
+        // Set the location of the JFrame (x, y)
+        frame.setLocation(550, 300);
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(checkOut.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_checkoutActionPerformed
+
+    private void upStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upStatusActionPerformed
+        // TODO add your handling code here:
+
+        updateStatue frame = new updateStatue();
+
+        // Set the size of the JFrame (width, height)
+        frame.setSize(820, 440);
+
+        // Set the location of the JFrame (x, y)
+        frame.setLocation(550, 300);
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(updateStatue.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_upStatusActionPerformed
+
+    private void upRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upRoomActionPerformed
+        // TODO add your handling code here:
+        updateRoom frame = new updateRoom();
+
+        // Set the size of the JFrame (width, height)
+        frame.setSize(820, 440);
+
+        // Set the location of the JFrame (x, y)
+        frame.setLocation(550, 300);
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(updateRoom.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_upRoomActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void logOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutActionPerformed
+        // TODO add your handling code here:
+        Login frame = new Login();
+
+        frame.setLocation(400, 300);
+
+        frame.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+        this.dispose();
+
+    }//GEN-LAST:event_logOutActionPerformed
+
+    private void searchRoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchRoActionPerformed
+        // TODO add your handling code here:
+        searchRoom frame = new searchRoom();
+
+        // Set the size of the JFrame (width, height)
+        frame.setSize(820, 440);
+
+        // Set the location of the JFrame (x, y)
+        frame.setLocation(550, 300);
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(searchRoom.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_searchRoActionPerformed
+
+    private void customerinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerinfoActionPerformed
+        // TODO add your handling code here:
+        customer_info frame = new customer_info();
+
+        // Set the size of the JFrame (width, height)
+        frame.setSize(820, 440);
+
+        // Set the location of the JFrame (x, y)
+        frame.setLocation(550, 300);
+
+        // Set the default close operation
+//        frame.setDefaultCloseOperation(customer_info.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_customerinfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,7 +276,13 @@ public class reception extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton checkout;
+    private javax.swing.JButton customerinfo;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton logOut;
+    private javax.swing.JButton searchRo;
+    private javax.swing.JButton upRoom;
+    private javax.swing.JButton upStatus;
     // End of variables declaration//GEN-END:variables
 }

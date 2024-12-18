@@ -26,7 +26,6 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
@@ -86,7 +85,7 @@ public class Login extends javax.swing.JFrame {
 
         login.setBackground(new java.awt.Color(0, 102, 102));
         login.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
+        login.setForeground(new java.awt.Color(102, 102, 102));
         login.setText("Login");
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,11 +163,17 @@ public class Login extends javax.swing.JFrame {
         String pass = password.getText();
 
 //        System.out.println(user + " " + pass);
-
         if (user.equals("staff") && pass.equals("1234")) {
+
+            recep.setExtendedState(reception.MAXIMIZED_BOTH);
+            recep.setDefaultCloseOperation(reception.EXIT_ON_CLOSE);
+//            recep.setUndecorated(true);
             recep.setVisible(true);
             this.dispose();
         } else if (user.equals("admin") && pass.equals("1234")) {
+            manager.setExtendedState(admin.MAXIMIZED_BOTH);
+            manager.setDefaultCloseOperation(admin.EXIT_ON_CLOSE);
+//            manager.setUndecorated(true);
             manager.setVisible(true);
             this.dispose();
         }

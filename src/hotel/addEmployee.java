@@ -34,6 +34,7 @@ public class addEmployee extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         submitButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        submitButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
@@ -83,6 +84,16 @@ public class addEmployee extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 3, 24)); // NOI18N
         jLabel1.setText("ADD EMPLOYEE DETAILS");
 
+        submitButton1.setBackground(new java.awt.Color(245, 245, 220));
+        submitButton1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 3, 12)); // NOI18N
+        submitButton1.setText("Cancel");
+        submitButton1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 102, 0))));
+        submitButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -122,6 +133,8 @@ public class addEmployee extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(submitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 141, Short.MAX_VALUE)
@@ -167,7 +180,9 @@ public class addEmployee extends javax.swing.JFrame {
                     .addComponent(emailField)
                     .addComponent(emailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(submitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15))
         );
 
@@ -221,6 +236,11 @@ public class addEmployee extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void submitButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_submitButton1ActionPerformed
     private void clearFields() {
         nameField.setText(""); // Correct reference for NameField
         ageField.setText(""); // Correct reference for AgeField
@@ -286,6 +306,7 @@ public class addEmployee extends javax.swing.JFrame {
     private javax.swing.JTextField salaryField;
     private javax.swing.JLabel salaryLabel;
     private javax.swing.JButton submitButton;
+    private javax.swing.JButton submitButton1;
     // End of variables declaration//GEN-END:variables
 
 }
