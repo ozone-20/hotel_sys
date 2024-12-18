@@ -158,7 +158,6 @@ public class Login extends javax.swing.JFrame {
 
         reception recep = new reception();
         admin manager = new admin();
-        System.out.println("eslam");
         String user = userName.getText();
         String pass = password.getText();
 
@@ -212,7 +211,7 @@ public class Login extends javax.swing.JFrame {
             public void run() {
                 new Login().setVisible(true);
             }
-        });
+        });        
     }
 
 

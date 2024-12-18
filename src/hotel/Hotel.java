@@ -1,55 +1,49 @@
 package hotel;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class Hotel {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
-        Login frame = new Login();
 
-        // Set the size of the JFrame (width, height)
-//        frame.setSize(820, 440);
+//        Login frame = new Login();
+//
+//        //  frame.setSize(820, 440);
+//        // Set the location of the JFrame (x, y)
+//        frame.setLocation(450, 250);
+//
+//        // Set the default close operation
+//        frame.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+//
+//        frame.setVisible(true);
 
-        // Set the location of the JFrame (x, y)
-        frame.setLocation(450, 250);
 
-        // Set the default close operation
-        frame.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+           singleton instance1 = singleton.getInstance();
+           singleton instance2 = singleton.getInstance();
+           
+           System.out.println(instance1.getGuest().get(0));
+           System.out.println(instance2.getGuest());
+           System.out.println(instance1.getEmployee());
+           System.out.println(instance2.getEmployee());
+           System.out.println(instance1.getRoom());
+           System.out.println(instance2.getRoom());
 
-        frame.setVisible(true);
+       
         
         
-        
-        
-//         String[][] x = {
-//             {"1", "eslam", "mokhtar"}, 
-//             {"2", "eslam", "mohamed"}, 
-//             {"3", "eslam", "fouad"}};
-//        
-//        
-//
-//        Connection conn = null;
-//
-//        try {
-//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eslam", "root", "");
-//
-//            Statement stm = conn.createStatement();
-//            String query = "select * from name";
-//            ResultSet rs = stm.executeQuery(query);
-//
-//            while (rs.next()) {
-//                System.out.println(rs.getString("fName"));
-//                System.out.println(rs.getString("lName"));
-//
+//        for (ArrayList<String> row : guest) {
+//            for (String element : row) {
+//                System.out.print(element + " ");
 //            }
-//        } catch (SQLException e) {
-//            System.out.println(e);
+//            System.out.println();
 //        }
-
     }
+    
+//    public static boolean isString(String input) {
+//        return input != null && input.matches("^[a-zA-Z\\s]+$");
+//    }
 
 }
