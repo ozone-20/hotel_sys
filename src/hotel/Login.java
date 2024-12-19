@@ -1,5 +1,6 @@
 package hotel;
 
+import hotel.singletonFile.paymentProcessor;
 import java.sql.*;
 
 public class Login extends javax.swing.JFrame {
@@ -211,7 +212,11 @@ public class Login extends javax.swing.JFrame {
             public void run() {
                 new Login().setVisible(true);
             }
-        });        
+        });
+
+        paymentProcessor processor3 = paymentProcessor.getInstance();
+
+        processor3.processPayment("Payment of $300 to Account c");
     }
 
 
