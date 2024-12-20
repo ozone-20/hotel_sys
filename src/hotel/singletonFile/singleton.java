@@ -4,8 +4,12 @@
  */
 package hotel.singletonFile;
 
+import Proxy.database;
+import Proxy.proxy;
+import hotel.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -18,6 +22,7 @@ public class singleton {
     private static ArrayList<ArrayList<String>> guest = new ArrayList<>();
     private static ArrayList<ArrayList<String>> employee = new ArrayList<>();
     private static ArrayList<ArrayList<String>> room = new ArrayList<>();
+    private final database connect = new proxy();
 
     public static singleton getInstance() {
         if (instance == null) {
@@ -26,89 +31,72 @@ public class singleton {
         return instance;
     }
 
-    public static singleton updateInstance() {
-        instance = new singleton();
-        return instance;
-    }
-
+//    public static singleton updateInstance() {
+//        instance = new singleton();
+//        return instance;
+//    }
     private singleton() {
-        Connection conn = null;
+//        Connection conn = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "");
-            Statement stm = conn.createStatement();
-            
+            Statement stm = connect.connectBy("reyad");
+
             String query = "select * from guest";
             ResultSet rs = stm.executeQuery(query);
 
-            ArrayList<String> newRow = new ArrayList<>();
-
-
             while (rs.next()) {
-                newRow.clear();
-
-                newRow.add(rs.getString("documentType"));
-                newRow.add(rs.getString("number"));
-                newRow.add(rs.getString("name"));
-                newRow.add(rs.getString("gender"));
-                newRow.add(rs.getString("country"));
-                newRow.add(rs.getString("roomNumber"));
-                newRow.add(rs.getString("status"));
-                newRow.add(rs.getString("deposite"));
-//                System.out.println(newRow);
-                guest.add(newRow);
+                
+                guest.add(new ArrayList<>(Arrays.asList(
+                        rs.getString("documentType"), 
+                        rs.getString("number"), 
+                        rs.getString("name"),
+                        rs.getString("gender"),
+                        rs.getString("country"),
+                        rs.getString("roomNumber"),
+                        rs.getString("status"),
+                        rs.getString("deposite")
+                        )));
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
-        
+
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "");
-            Statement stm = conn.createStatement();
-            
+            Statement stm = connect.connectBy("eslam");
+
             String query = "select * from employee";
             ResultSet rs = stm.executeQuery(query);
 
-            ArrayList<String> newRow = new ArrayList<>();
 
-
-            while (rs.next()) {
-                newRow.clear();
-
-                newRow.add(rs.getString("name"));
-                newRow.add(rs.getString("age"));
-                newRow.add(rs.getString("gender"));
-                newRow.add(rs.getString("department"));
-                newRow.add(rs.getString("salary"));
-                newRow.add(rs.getString("phone"));
-                newRow.add(rs.getString("email"));
-//                System.out.println(newRow);
-                employee.add(newRow);
+            while (rs.next()) {                            
+                employee.add(new ArrayList<>(Arrays.asList(
+                        rs.getString("name"), 
+                        rs.getString("age"), 
+                        rs.getString("gender"),
+                        rs.getString("department"),
+                        rs.getString("salary"),
+                        rs.getString("phone"),
+                        rs.getString("email")
+                        )));
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
-        
-         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "");
-            Statement stm = conn.createStatement();
-            
+
+        try {
+            Statement stm = connect.connectBy("reyad");
+
             String query = "select * from room";
             ResultSet rs = stm.executeQuery(query);
 
-            ArrayList<String> newRow = new ArrayList<>();
-
-
-            while (rs.next()) {
-                newRow.clear();
-
-                newRow.add(rs.getString("roomNum"));
-                newRow.add(rs.getString("availabilty"));
-                newRow.add(rs.getString("status"));
-                newRow.add(rs.getString("price"));
-                newRow.add(rs.getString("bedType"));
-//                System.out.println(newRow);
-                room.add(newRow);
+            while (rs.next()) {               
+                room.add(new ArrayList<>(Arrays.asList(
+                        rs.getString("roomNum"), 
+                        rs.getString("availabilty"), 
+                        rs.getString("status"),
+                        rs.getString("price"),
+                        rs.getString("bedType")
+                        )));
             }
         } catch (SQLException e) {
             System.out.println(e);
@@ -123,6 +111,7 @@ public class singleton {
     public static ArrayList<ArrayList<String>> getEmployee() {
         return employee;
     }
+
     public static ArrayList<ArrayList<String>> getRoom() {
         return room;
     }

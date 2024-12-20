@@ -12,12 +12,14 @@ import javax.swing.JOptionPane;
  */
 public class checkOut extends javax.swing.JFrame {
 
-    String[][] rooms = {
+    String[][] rooms = 
+    {
         {"3457872", "101", "23/3", "26/3"},
         {"8482000", "102", "23/4", "26/4"},
         {"2729191", "103", "24/5", "27/5"},
         {"3899302", "104", "21/3", "24/3"},
-        {"2893792", "105", "26/4", "31/4"},};
+        {"2893792", "105", "26/4", "31/4"},
+    };
 
     public checkOut() {
         initComponents();

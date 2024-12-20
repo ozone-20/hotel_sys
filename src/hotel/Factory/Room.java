@@ -4,6 +4,8 @@
  */
 package hotel.Factory;
 
+import Proxy.database;
+import Proxy.proxy;
 import java.sql.*;
 
 /**
@@ -11,6 +13,8 @@ import java.sql.*;
  * @author eslamsemedo
  */
 public abstract class Room {
+    private final database connect = new proxy();
+    
     private int roomNum;
     private String availabilty;
     private String status;
@@ -51,11 +55,10 @@ public abstract class Room {
     
     public void build(){
         //insert to database
-        Connection conn = null;
+//        Connection conn = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "");
-            Statement stm = conn.createStatement();
+            Statement stm = connect.connectBy("eslam");
             
             String query = String.format("INSERT INTO `room` (`roomNum`, `availabilty`, `status`, `price`, `bedType`) VALUES ('%d', '%s', '%s', '%s', '%s');", getRoomNum(), getavailabilty(), getstatus(), getprice(), getbedType());
 //            ResultSet rs = stm.executeQuery(query);
